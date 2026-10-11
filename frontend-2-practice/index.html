@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛУНА — Выбор даты и времени</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__container">
+            <div class="logo-group">
+                <div class="logo">ЛУНА</div>
+                <span class="logo-subtitle">Салон красоты</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav__link">Услуги</a>
+                <a href="#" class="nav__link">Мастера</a>
+                <a href="#" class="nav__link">Отзывы</a>
+            </nav>
+            <button class="btn btn--primary header__btn">Записаться</button>
+        </div>
+    </header>
+
+    <!-- Прогресс-бар -->
+    <div class="progress-section">
+        <div class="progress-section__container">
+            <div class="progress-header">
+                <span class="progress-header__title">Запись онлайн</span>
+                <span class="progress-header__step">3 из 5</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar__fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <div class="main__container">
+            <h1 class="page-title">Выберите дату и время</h1>
+
+            <div class="booking">
+                <!-- Карточка календаря -->
+                <section class="calendar-card">
+                    <div class="calendar-card__header">
+                        <h2 class="calendar-card__title" id="calendar-title"></h2>
+                        <div class="calendar-navigation">
+                            <button type="button" class="calendar-arrow" id="previous-month" aria-label="Предыдущий месяц">‹</button>
+                            <button type="button" class="calendar-arrow" id="next-month" aria-label="Следующий месяц">›</button>
+                        </div>
+                    </div>
+                    <div class="calendar" aria-labelledby="calendar-title"></div>
+                </section>
+
+                <!-- Карточка времени -->
+                <section class="time-card">
+                    <h2 class="time-card__title">Доступное время</h2>
+                    <p class="time-card__subtitle">Свободное время</p>
+                    
+                    <div class="time-slots" aria-label="Свободное время"></div>
+                    <p class="selected-time" aria-live="polite">Выбрано: <span>Выберите время</span></p>
+                </section>
+            </div>
+
+            <!-- Кнопка Далее -->
+            <div class="actions">
+                <p class="booking-summary" aria-live="polite"></p>
+                <button type="button" class="btn btn--primary btn--next" disabled>Далее</button>
+            </div>
+        </div>
+    </main>
+
+    <dialog class="confirmation" aria-labelledby="confirmation-title">
+        <h2 id="confirmation-title">Дата и время выбраны</h2>
+        <p class="confirmation__summary"></p>
+        <p>Это учебная страница: запись не отправляется в салон.</p>
+        <form method="dialog">
+            <button class="btn btn--primary">Закрыть</button>
+        </form>
+    </dialog>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">ЛУНА</div>
+                <p class="footer__slogan">Красота начинается с заботы о себе.</p>
+            </div>
+            <div class="footer__col">
+                <p>Москва, ул. Большая Дмитровка, 18</p>
+                <p>+7 (495) 555-24-24</p>
+            </div>
+            <div class="footer__col">
+                <p>Ежедневно 09:00–21:00</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
